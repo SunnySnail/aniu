@@ -1,0 +1,5 @@
+<!--pages/stockDetail/stock_detail.wxml-->
+<view class="loading" wx:if="{{!id}}"> 正在拼命加载数据中 </view>
+<block wx:if="{{id}}">
+    <web-view src="https://m.aniu.com.cn/xiaochengxu_web/dist/html/stock_detail.html?id={{id}}"></web-view>
+</block>

@@ -1,0 +1,149 @@
+.title-pic {
+    width: 250rpx;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.title {
+    text-align: center;
+}
+
+.title
+.main-title,
+.title
+.sub-desc {
+    text-align: center;
+    display: block;
+}
+
+.title
+.main-title {
+    color: #fd7d3d;
+    font-size: 32rpx;
+    margin-top: 10rpx;
+    font-weight: bold;
+}
+
+.title
+.sub-desc {
+    margin: 0 0 30rpx 0;
+    color: #888;
+    font-size: 24rpx;
+}
+
+.stock-item {
+    padding: 20rpx;
+    border-bottom: 1px solid #eee;
+}
+
+.stock-item
+.detail {
+    font-size: 10px;
+    color: #888;
+    text-align: right;
+    margin-top: 4px;
+    text-decoration: underline;
+}
+
+.stock-name {
+    position: relative;
+    overflow: hidden;
+}
+
+.stock-name
+.name {
+    float: left;
+    color: #6a6a6a;
+    font-weight: bold;
+    font-size: 32rpx;
+}
+
+
+.stock-name
+.rank-info {
+    top: 4rpx;
+    position: absolute;
+    right: 0;
+    font-size: 24rpx;
+    color: #888;
+}
+
+.rank-info
+.line {
+    color: #ddd;
+    margin: 0 10rpx;
+}
+
+.stock-info {
+    overflow: hidden;
+    margin-top: 20rpx;
+}
+
+.stock-info
+.stock-exponent {
+    float: left;
+    font-size: 30rpx;
+    color: #888;
+    margin-left: 20rpx;
+}
+
+.stock-info
+.advice {
+    padding: 4rpx 10rpx;
+    float: right;
+    font-size: 30rpx;
+    border-radius: 10rpx;
+}
+
+.stock-info
+.advice.green {
+    color: #10af9d;
+    border: 1px solid #10af9d;
+}
+
+.stock-info
+.advice.yellow {
+    color: #e4a43a;
+    border: 1px solid #e4a43a;
+}
+
+.stock-info
+.advice.red {
+    color: #fd5a4b;
+    border: 1px solid #fd5a4b;
+}
+
+.explain {
+    color: #bec2c9;
+    font-size: 24rpx;
+    padding: 20rpx 20rpx 120rpx;
+    line-height: 40rpx;
+}
+
+.explain
+text {
+    display: block;
+}
+
+.invest-btn {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-top: 1px solid #eee;
+  box-shadow: 0 -8rpx 4px #eee;
+  background-color: #fff;
+  color: #fd7d3d;
+  font-weight: bold;
+}
+
+.box {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+
+}
