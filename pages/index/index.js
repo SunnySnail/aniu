@@ -6,15 +6,16 @@ Page({
     data: {
         list: [],
         index_time: 0,
-        showBox: false
+        showBox: false,
+        hidden: true
     },
     //事件处理函数
-    bindViewTap: function() {
+    bindViewTap: function () {
 
     },
-    onLoad: function(options) {
+    onLoad: function (options) {
         this.setData({
-          from: options.from || 'aniu'
+            from: options.from || 'aniu'
         })
         this.fetchList();
         if (app.globalData.userInfo) {
@@ -44,10 +45,10 @@ Page({
             })
         }
     },
-    filterList: function(list) {
+    filterList: function (list) {
         var _list = [];
 
-        for(var i=0; i<list.length; i++) {
+        for (var i = 0; i < list.length; i++) {
             var item = list[i];
             var _item = {
                 aniu_fundname: item.fund.aniu_fundname,
@@ -63,7 +64,7 @@ Page({
 
         return _list;
     },
-    fetchList: function() {
+    fetchList: function () {
         var url = "https://m.aniu.com.cn/fof_pe_share/";
         var self = this;
 
@@ -72,7 +73,7 @@ Page({
             header: {
                 'content-type': 'application/json',
             },
-            success: function(res) {
+            success: function (res) {
                 self.setData({
                     index_time: res.data.index_time,
                     list: self.filterList(res.data.slist)
@@ -80,7 +81,7 @@ Page({
             }
         })
     },
-    getUserInfo: function(e) {
+    getUserInfo: function (e) {
         console.log(e)
         app.globalData.userInfo = e.detail.userInfo
         this.setData({
@@ -88,8 +89,8 @@ Page({
             hasUserInfo: true
         })
     },
-    onShareAppMessage: function(res) {
-        if(res.from == 'button') {
+    onShareAppMessage: function (res) {
+        if (res.from == 'button') {
             console.log(res.target);
         }
 
@@ -98,18 +99,24 @@ Page({
             path: 'pages/index/index'
         }
     },
-    canShow: function($e) {
-      if($e.touches.length == 3) {
-        this.setData({
-          showBox: true
-        });
-      }
+    canShow: function ($e) {
+        if ($e.touches.length == 3) {
+            this.setData({
+                showBox: true
+            });
+        }
 
-      if($e.touches.length == 2) {
+        if ($e.touches.length == 2) {
+            this.setData({
+                showBox: false
+            })
+        }
+
+    },
+
+    gotoKefu: function(){
         this.setData({
-          showBox: false
+            hidden: false
         })
-      }
-      
     }
 })
